@@ -33,7 +33,7 @@
       class="bg-black min-h-screen bg-[url('./images/background.png')] bg-no-repeat bg-center"
     >
       <!-- Homepage  -->
-      <section class="hidden">
+      <section id="home-screen" class="">
         <div
           class="text-center font-poppins text-white text-2xl flex flex-col min-h-screen justify-center items-center space-y-10 mx-4"
         >
@@ -41,17 +41,16 @@
           <p class="font-medium">
             Unleash Your Keyboard Kung Fu : Press "Enter" to Play
           </p>
-          <div>
-            <button
-              class="btn bg-white border-0 text-black font-semibold text-2xl"
-            >
-              Play Now
-            </button>
-          </div>
+          <button
+            onclick="play()"
+            class="btn bg-white border-0 text-black font-semibold text-2xl"
+          >
+            Play Now
+          </button>
         </div>
       </section>
       <!-- game section -->
-      <section class="hidden">
+      <section id="game-screen" class="hidden">
         <div
           class="flex justify-center items-center flex-col min-h-screen mx-4 space-y-16"
         >
@@ -65,45 +64,46 @@
               Don't watch keyboard while playing...
             </div>
             <div
-              class="text-black text-7xl font-semibold h-full flex justify-center items-center border-red-50"
+              id="random-alpha"
+              class="text-black text-9xl font-semibold h-full flex justify-center items-center border-red-50"
             >
               Y
             </div>
           </div>
           <!-- keyboard start  -->
-          <div>
+          <div class="w-xl">
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd class="kbd">q</kbd>
-              <kbd class="kbd">w</kbd>
-              <kbd class="kbd">e</kbd>
-              <kbd class="kbd">r</kbd>
-              <kbd class="kbd">t</kbd>
-              <kbd class="kbd">y</kbd>
-              <kbd class="kbd">u</kbd>
-              <kbd class="kbd">i</kbd>
-              <kbd class="kbd">o</kbd>
-              <kbd class="kbd">p</kbd>
+              <kbd id="q" class="kbd w-14 h-14 text-2xl">q</kbd>
+              <kbd id="w" class="kbd w-14 h-14 text-2xl">w</kbd>
+              <kbd id="e" class="kbd w-14 h-14 text-2xl">e</kbd>
+              <kbd id="r" class="kbd w-14 h-14 text-2xl">r</kbd>
+              <kbd id="t" class="kbd w-14 h-14 text-2xl">t</kbd>
+              <kbd id="y" class="kbd w-14 h-14 text-2xl">y</kbd>
+              <kbd id="u" class="kbd w-14 h-14 text-2xl">u</kbd>
+              <kbd id="i" class="kbd w-14 h-14 text-2xl">i</kbd>
+              <kbd id="o" class="kbd w-14 h-14 text-2xl">o</kbd>
+              <kbd id="p" class="kbd w-14 h-14 text-2xl">p</kbd>
             </div>
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd class="kbd">a</kbd>
-              <kbd class="kbd">s</kbd>
-              <kbd class="kbd">d</kbd>
-              <kbd class="kbd">f</kbd>
-              <kbd class="kbd">g</kbd>
-              <kbd class="kbd">h</kbd>
-              <kbd class="kbd">j</kbd>
-              <kbd class="kbd">k</kbd>
-              <kbd class="kbd">l</kbd>
+              <kbd id="a" class="kbd w-14 h-14 text-2xl">a</kbd>
+              <kbd id="s" class="kbd w-14 h-14 text-2xl">s</kbd>
+              <kbd id="d" class="kbd w-14 h-14 text-2xl">d</kbd>
+              <kbd id="f" class="kbd w-14 h-14 text-2xl">f</kbd>
+              <kbd id="g" class="kbd w-14 h-14 text-2xl">g</kbd>
+              <kbd id="h" class="kbd w-14 h-14 text-2xl">h</kbd>
+              <kbd id="j" class="kbd w-14 h-14 text-2xl">j</kbd>
+              <kbd id="k" class="kbd w-14 h-14 text-2xl">k</kbd>
+              <kbd id="l" class="kbd w-14 h-14 text-2xl">l</kbd>
             </div>
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd class="kbd">z</kbd>
-              <kbd class="kbd">x</kbd>
-              <kbd class="kbd">c</kbd>
-              <kbd class="kbd">v</kbd>
-              <kbd class="kbd">b</kbd>
-              <kbd class="kbd">n</kbd>
-              <kbd class="kbd">m</kbd>
-              <kbd class="kbd">/</kbd>
+              <kbd id="z" class="kbd w-14 h-14 text-2xl">z</kbd>
+              <kbd id="x" class="kbd w-14 h-14 text-2xl">x</kbd>
+              <kbd id="c" class="kbd w-14 h-14 text-2xl">c</kbd>
+              <kbd id="v" class="kbd w-14 h-14 text-2xl">v</kbd>
+              <kbd id="b" class="kbd w-14 h-14 text-2xl">b</kbd>
+              <kbd id="n" class="kbd w-14 h-14 text-2xl">n</kbd>
+              <kbd id="m" class="kbd w-14 h-14 text-2xl">m</kbd>
+              <kbd id="/" class="kbd w-14 h-14 text-2xl">/</kbd>
             </div>
           </div>
           <!-- keyboard end -->
@@ -123,7 +123,10 @@
         </div>
       </section>
       <!-- play-again  -->
-      <section class="flex justify-center items-center min-h-screen">
+      <section
+        id="result-screen"
+        class="hidden flex justify-center items-center min-h-screen"
+      >
         <div
           class="h-72 w-96 rounded-xl bg-gradient-to-br from-fuchsia-600 to-blue-500 font-poppins flex flex-col justify-center space-y-6 items-center text-white font-poppins"
         >
@@ -139,6 +142,7 @@
         </div>
       </section>
     </main>
+    <script src="./script/utility.js"></script>
     <script src="./script/script.js"></script>
   </body>
 </html>
