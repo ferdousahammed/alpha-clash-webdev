@@ -1,8 +1,16 @@
-function removeElementById(elementID) {
-  document.getElementById(elementID).classList.add("hidden");
+function addClassById(elementID, ...className) {
+  for (const i of className) {
+    document.getElementById(elementID).classList.add(i);
+  }
 }
-function showElementById(elementID) {
-  document.getElementById(elementID).classList.remove("hidden");
+function removeClassById(elementID, ...className) {
+  for (const i of className) {
+    document.getElementById(elementID).classList.remove(i);
+  }
+}
+
+function getInnerTextById(elementID) {
+  return document.getElementById(elementID).innerText;
 }
 
 function randomAlphabetGenerate() {

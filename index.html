@@ -112,12 +112,18 @@
             <button
               class="btn rounded-full text-white text-xl font-medium bg-fuchsia-800 border-0 px-9"
             >
-              Life <img src="./images/heart-icon.svg" alt="" /><span>1</span>
+              Life <img src="./images/heart-icon.svg" alt="" /><span
+                id="life-point"
+                >5</span
+              >
             </button>
             <button
               class="btn rounded-full text-white text-xl font-medium bg-indigo-800 border-0 px-9"
             >
-              Score <img src="./images/dollar-icon.svg" alt="" /><span>1</span>
+              Score <img src="./images/dollar-icon.svg" alt="" /><span
+                id="score-point"
+                >0</span
+              >
             </button>
           </div>
         </div>
@@ -131,12 +137,13 @@
           class="h-72 w-96 rounded-xl bg-gradient-to-br from-fuchsia-600 to-blue-500 font-poppins flex flex-col justify-center space-y-6 items-center text-white font-poppins"
         >
           <h2 class="text-bold text-6xl font-bold">
-            Score: <span class="font-normal">14</span>
+            Score: <span id="final-score" class="font-normal">0</span>
           </h2>
           <button
+            onclick="playAgain()"
             class="btn bg-white border-none px-4 text-black text-2xl font-semibold"
           >
-            Play Now
+            Play Again
           </button>
           <p class="text-xl">Practice will make you Pro</p>
         </div>
