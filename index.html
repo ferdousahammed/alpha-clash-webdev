@@ -27,6 +27,10 @@
       .font-anton {
         font-family: "Anton", sans-serif;
       }
+
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
   </head>
   <body>
@@ -57,54 +61,70 @@
         >
           <!-- screen  -->
           <div
-            class="lg:w-[1170px] w-full h-[440px] border-[20px] border-gray-800 rounded-xl bg-white bg-opacity-70 font-poppins flex flex-col items-center"
+            id="screen"
+            class="relative lg:w-[1170px] w-full lg:h-96 h-[200px] border-[20px] border-gray-800 rounded-xl bg-[#ffffffb3] font-poppins flex flex-col items-center"
           >
             <div
-              class="bg-gray-800 rounded-b-2xl px-7 py-4 text-white text-center mx-4"
+              id="notification"
+              class="bg-gray-800 rounded-b-2xl px-7 py-4 text-white text-xs lg:text-base text-center mx-4"
             >
               Don't watch keyboard while playing...
             </div>
             <div
               id="random-alpha"
-              class="text-black text-9xl font-semibold h-full flex justify-center items-center border-red-50"
+              class="text-black lg:text-9xl md:text-7xl text-4xl font-semibold h-full flex justify-center items-center border-red-50"
             >
               Y
             </div>
           </div>
+          <!-- <div
+            id=""
+            class="absolute mt-0 top-0 w-full h-full bg-black bg-opacity-80"
+          >
+            <div
+              class="bg-base-100 lg:p-10 p-5 rounded-lg max-w-80 flex justify-between mx-auto relative top-1/2 transform -translate-y-1/2"
+            >
+              <div>
+                <h3 class="font-bold text-lg">Hello!</h3>
+                <p class="py-4">Press ESC key or click on ✕ button to close</p>
+              </div>
+              <button class="btn btn-sm btn-circle btn-ghost">✕</button>
+            </div>
+          </div> -->
           <!-- keyboard start  -->
-          <div class="w-xl">
+          <div class="w-full">
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd id="q" class="kbd w-14 h-14 text-2xl">q</kbd>
-              <kbd id="w" class="kbd w-14 h-14 text-2xl">w</kbd>
-              <kbd id="e" class="kbd w-14 h-14 text-2xl">e</kbd>
-              <kbd id="r" class="kbd w-14 h-14 text-2xl">r</kbd>
-              <kbd id="t" class="kbd w-14 h-14 text-2xl">t</kbd>
-              <kbd id="y" class="kbd w-14 h-14 text-2xl">y</kbd>
-              <kbd id="u" class="kbd w-14 h-14 text-2xl">u</kbd>
-              <kbd id="i" class="kbd w-14 h-14 text-2xl">i</kbd>
-              <kbd id="o" class="kbd w-14 h-14 text-2xl">o</kbd>
-              <kbd id="p" class="kbd w-14 h-14 text-2xl">p</kbd>
+              <kbd id="q" class="kbd text-sm lg:text-2xl">q</kbd>
+              <kbd id="w" class="kbd text-sm lg:text-2xl">w</kbd>
+              <kbd id="e" class="kbd text-sm lg:text-2xl">e</kbd>
+              <kbd id="r" class="kbd text-sm lg:text-2xl">r</kbd>
+              <kbd id="t" class="kbd text-sm lg:text-2xl">t</kbd>
+              <kbd id="y" class="kbd text-sm lg:text-2xl">y</kbd>
+              <kbd id="u" class="kbd text-sm lg:text-2xl">u</kbd>
+              <kbd id="i" class="kbd text-sm lg:text-2xl">i</kbd>
+              <kbd id="o" class="kbd text-sm lg:text-2xl">o</kbd>
+              <kbd id="p" class="kbd text-sm lg:text-2xl">p</kbd>
             </div>
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd id="a" class="kbd w-14 h-14 text-2xl">a</kbd>
-              <kbd id="s" class="kbd w-14 h-14 text-2xl">s</kbd>
-              <kbd id="d" class="kbd w-14 h-14 text-2xl">d</kbd>
-              <kbd id="f" class="kbd w-14 h-14 text-2xl">f</kbd>
-              <kbd id="g" class="kbd w-14 h-14 text-2xl">g</kbd>
-              <kbd id="h" class="kbd w-14 h-14 text-2xl">h</kbd>
-              <kbd id="j" class="kbd w-14 h-14 text-2xl">j</kbd>
-              <kbd id="k" class="kbd w-14 h-14 text-2xl">k</kbd>
-              <kbd id="l" class="kbd w-14 h-14 text-2xl">l</kbd>
+              <kbd id="a" class="kbd text-sm lg:text-2xl">a</kbd>
+              <kbd id="s" class="kbd text-sm lg:text-2xl">s</kbd>
+              <kbd id="d" class="kbd text-sm lg:text-2xl">d</kbd>
+              <kbd id="f" class="kbd text-sm lg:text-2xl">f</kbd>
+              <kbd id="g" class="kbd text-sm lg:text-2xl">g</kbd>
+              <kbd id="h" class="kbd text-sm lg:text-2xl">h</kbd>
+              <kbd id="j" class="kbd text-sm lg:text-2xl">j</kbd>
+              <kbd id="k" class="kbd text-sm lg:text-2xl">k</kbd>
+              <kbd id="l" class="kbd text-sm lg:text-2xl">l</kbd>
             </div>
             <div class="flex justify-center gap-1 my-1 w-full">
-              <kbd id="z" class="kbd w-14 h-14 text-2xl">z</kbd>
-              <kbd id="x" class="kbd w-14 h-14 text-2xl">x</kbd>
-              <kbd id="c" class="kbd w-14 h-14 text-2xl">c</kbd>
-              <kbd id="v" class="kbd w-14 h-14 text-2xl">v</kbd>
-              <kbd id="b" class="kbd w-14 h-14 text-2xl">b</kbd>
-              <kbd id="n" class="kbd w-14 h-14 text-2xl">n</kbd>
-              <kbd id="m" class="kbd w-14 h-14 text-2xl">m</kbd>
-              <kbd id="/" class="kbd w-14 h-14 text-2xl">/</kbd>
+              <kbd id="z" class="kbd text-sm lg:text-2xl">z</kbd>
+              <kbd id="x" class="kbd text-sm lg:text-2xl">x</kbd>
+              <kbd id="c" class="kbd text-sm lg:text-2xl">c</kbd>
+              <kbd id="v" class="kbd text-sm lg:text-2xl">v</kbd>
+              <kbd id="b" class="kbd text-sm lg:text-2xl">b</kbd>
+              <kbd id="n" class="kbd text-sm lg:text-2xl">n</kbd>
+              <kbd id="m" class="kbd text-sm lg:text-2xl">m</kbd>
+              <kbd id="/" class="kbd text-sm lg:text-2xl">/</kbd>
             </div>
           </div>
           <!-- keyboard end -->
@@ -118,6 +138,12 @@
                 >5</span
               >
             </button>
+            <progress
+              id="progress"
+              class="progress bg-amber-50 w-56 progress-warning"
+              value="0"
+              max="10"
+            ></progress>
             <button
               class="btn rounded-full text-white text-xl font-medium bg-indigo-800 border-0 px-9"
             >
